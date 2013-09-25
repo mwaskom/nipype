@@ -108,6 +108,8 @@ def create_pyscript(node, updatehash=False, store_exception=True):
     # create python script to load and trap exception
     cmdstr = """import os
 import sys
+import matplotlib
+matplotlib.use('Agg')
 from nipype import config, logging
 from nipype.utils.filemanip import loadpkl, savepkl
 from socket import gethostname
